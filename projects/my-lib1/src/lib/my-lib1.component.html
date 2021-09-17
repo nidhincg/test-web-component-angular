@@ -1,0 +1,26 @@
+<!-- <p-dialog header="Title" [(visible)]="display">
+    Content
+</p-dialog> -->
+
+<button pButton type="button" label="Open Modal" (click)="openModal($event)"></button>
+
+
+
+<p-dialog header="Title" [(visible)]="display" [style]="{width: '60vw', height: '40vw'}">
+    <ng-template pTemplate="header">
+        Select the details..
+    </ng-template>
+    
+    <div>
+        test
+        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
+    </div>
+    <ng-template pTemplate="footer">
+        <button pButton type="button" label="Close Modal" (click)="close($event)"></button>
+        <button pButton type="button" label="test Btn" ></button>
+        <button pButton type="button" label="test Btn1" ></button>
+        <button pButton type="button" label="test Btn2" ></button>
+    </ng-template>
+    Content
+   
+</p-dialog>
